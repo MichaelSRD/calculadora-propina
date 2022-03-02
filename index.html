@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="contenedor">
+        <h1>
+          SPLI <br />
+          TTER
+        </h1>
+
+        <div class="Calculadora">
+          
+            <div class="cuadrou">
+              <label for="TotalP">Bill</label>
+              <input
+                type="number"
+                name="TotalP"
+                id="TotalP"
+                placeholder="0"
+                value=""
+                step="any"
+                class=""
+              />
+
+              <p>Select Tip %</p>
+
+              <div class="percentages-container">
+                <button class="percentage clip" value="5">5%</button>
+                <button class="percentage clip" value="10">10%</button>
+                <button class="percentage clip" value="15">15%</button>
+                <button class="percentage clip" value="25">25%</button>
+                <button class="percentage clip" value="50">50%</button>
+                <input
+                  class="percentage custom clip"
+                  type="number"
+                  placeholder="Custom"
+                  maxlength="2"
+                  id="Custom"
+                  oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                />
+              </div>
+             <div class="label-linea">
+              <label for="NumeroPersonas">Number of People</label>
+              <div class="error-msg">Can't be zero</div>
+             </div>
+              
+              <input
+                type="number"
+                name="NumeroPersonas"
+                id="NumeroPersonas"
+                placeholder="1"
+              />
+            </div>
+            <div class="cuadroR">
+              <div class="TipAmountUno">
+                <p>
+                  Tip Amount <br />
+                  /person
+                </p>
+                <span id="monto">$0.0</span>
+              </div>
+              <div class="TipAmount">
+                <p>
+                  Total <br />
+                  /person
+                </p>
+                <span id="montotwo">$0.0</span>
+              </div>
+              <button type="reset" id="boton"  >RESET</button>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="JQuery.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
